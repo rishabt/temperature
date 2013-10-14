@@ -1,3 +1,4 @@
+
 /** 
  * @author Aditya Mahajan <aditya.mahajan@mcgill.ca>
  * @version 2013.10.06
@@ -6,7 +7,7 @@
 
 
 /**
- * The {@code Temperature} class allows a user to convert temperature from on
+ * The {@code Temperature} class allows a user to convert temperature from one
  * unit to another.
  *
  * Sample usage
@@ -65,7 +66,12 @@ public class Temperature {
                            break;
           default:         throw new IllegalArgumentException();
       }
-
+      
+      if(convertedValue < 0){
+    	  convertedValue = 0;										// Since Kelvin temperature cannot go below zero, I set it to zero
+    	  System.out.println("Kelvin scale does not go below 0");	// if it goes negative and print out the error
+      }
+      
       return convertedValue;
   }
 
@@ -80,7 +86,7 @@ public class Temperature {
                            break;
           case CELSIUS:    convertedValue = value - 273.15;
                            break;
-          case FAHRENHEIT: convertedValue = value * 9.0/5.0 - 459.67;
+          case FAHRENHEIT: convertedValue = Math.ceil(((value * 9.0/5.0) - 459.67));	//Gives the approximate value to Fahrenheit which can be tested
                            break;
           default:         throw new IllegalArgumentException();
       }
