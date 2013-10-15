@@ -86,9 +86,9 @@ public class TemperatureTest {
 	   System.out.println("Test getUnits() for Fahrenheit....") ;
 	   
 	   Temperature temp = new Temperature (32.0, Temperature.Units.FAHRENHEIT);
-	   Temperature converted = new Temperature(temp);
+	   Temperature test = new Temperature(temp);
 	   
-	   assertTrue(converted.getUnits().equals(Temperature.Units.FAHRENHEIT)) ;
+	   assertTrue(test.getUnits().equals(Temperature.Units.FAHRENHEIT)) ;
    }
    
    @Test
@@ -96,9 +96,9 @@ public class TemperatureTest {
 	   System.out.println("Test getUnits() for Kelvin....") ;
 	   
 	   Temperature temp = new Temperature (32.0, Temperature.Units.KELVIN);
-	   Temperature converted = new Temperature(temp);
+	   Temperature test = new Temperature(temp);
 	   
-	   assertTrue(converted.getUnits().equals(Temperature.Units.KELVIN)) ;
+	   assertTrue(test.getUnits().equals(Temperature.Units.KELVIN)) ;
    }
    
    @Test
@@ -106,9 +106,9 @@ public class TemperatureTest {
 	   System.out.println("Test getUnits() for Celsius....") ;
 	   
 	   Temperature temp = new Temperature (32.0, Temperature.Units.CELSIUS);
-	   Temperature converted = new Temperature(temp);
+	   Temperature test = new Temperature(temp);
 	   
-	   assertTrue(converted.getUnits().equals(Temperature.Units.CELSIUS)) ;
+	   assertTrue(test.getUnits().equals(Temperature.Units.CELSIUS)) ;
    }
    
    //The following are the test cases for getValue() for each case of Fahrenheit, Kelvin and Celsius
@@ -118,9 +118,9 @@ public class TemperatureTest {
 	   System.out.println("Test getValue() for Celsius....") ;
 	   
 	   Temperature temp = new Temperature (32.0, Temperature.Units.CELSIUS);
-	   Temperature converted = new Temperature(temp);
+	   Temperature test = new Temperature(temp);
 	   
-	   assertTrue(converted.getValue() == 32.0) ;
+	   assertTrue(test.getValue() == 32.0) ;
    }
    
    @Test
@@ -128,9 +128,9 @@ public class TemperatureTest {
 	   System.out.println("Test getValue() for Fahrenheit....") ;
 	   
 	   Temperature temp = new Temperature (32.0, Temperature.Units.FAHRENHEIT);
-	   Temperature converted = new Temperature(temp);
+	   Temperature test = new Temperature(temp);
 	   
-	   assertTrue(converted.getValue() == 32.0) ;
+	   assertTrue(test.getValue() == 32.0) ;
    }
    
    @Test
@@ -138,9 +138,9 @@ public class TemperatureTest {
 	   System.out.println("Test getValue() for Kelvin....") ;
 	   
 	   Temperature temp = new Temperature (32.0, Temperature.Units.KELVIN);
-	   Temperature converted = new Temperature(temp);
+	   Temperature test = new Temperature(temp);
 	   
-	   assertTrue(converted.getValue() == 32.0) ;
+	   assertTrue(test.getValue() == 32.0) ;
    }
    
    
